@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; panorama</title>
+    <meta name="description" content="360&deg; 3d world">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <style>
+         .header{
+                position: absolute;
+                top:-25px;
+                background: #fff;
+                border-radius: 30px;
+                width:100%;
+                height: 125px;
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                align-items:center;
+                gap:15%;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 32px;
+                z-index: 100;
+            }
+            .previousBtn{
+                cursor: pointer;
+                z-index: 10001;
+                background: none;
+                border:none;
+                position: absolute;
+                top: 40px;
+                left: 30px;
+            }
+        </style>
+    </style>
+</head>
+  <body>
+    <div class="header">
+        <button class="previousBtn" id="previousBtn" onclick="history.back();">Назад</button>
+        <div>AR Портал</div>
+    </div>
+    <a-scene>
+      <a-sky src="./img.png" rotation="0 -130 0"></a-sky>
+
+      <a-text font="kelsonsans" value="Озеро Байкал" width="6" position="-2.5 0.25 -1.5"
+              rotation="0 15 0"></a-text>
+    </a-scene>
+  </body>
+</html>
